@@ -3,10 +3,15 @@
     <remote name="TeamWin"
             fetch="https://github.com/TeamWin"
             review="https://gerrit.twrp.me" />
+    
+    <remote name="ONEWearOS"
+            fetch="https://github.com/ONE-WearOS"/>
 
 <!-- TWRP lives in TeamWin android-9.0 (not AOSP!) -->
     <remove-project name="platform/bootable/recovery"/>
-    <project path="bootable/recovery" name="android_bootable_recovery" remote="TeamWin" revision="android-9.0"/>
+    <project path="bootable/recovery" name="bootable_recovery" remote="ONEWearOS" revision="android-9.0"/>
+
+    <project path="vendor/omni" name="vendor_omni" remote="ONEWearOS" revision="android-9.0" />
 
 <!-- Use TeamWin fork for repacker support -->
   <remove-project name="android_build" />
